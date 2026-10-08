@@ -1,0 +1,4 @@
+#!/bin/sh
+# Git Bash on Windows rewrites args like /docs/ into C:/Program Files/Git/docs/ - stop it
+export MSYS_NO_PATHCONV=1
+exec java -cp "$(dirname "$0")/out" bhtp.BServe "$@"
